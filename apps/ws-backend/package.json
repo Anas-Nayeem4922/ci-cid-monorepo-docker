@@ -1,0 +1,17 @@
+{
+  "name": "ws-backend",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@repo/db": "*"
+  },
+  "scripts": {
+    "build": "bunx esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
+    "start": "bun dist/index.js",
+    "dev": "bun run build && bun run start"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
